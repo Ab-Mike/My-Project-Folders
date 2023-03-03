@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: hsl(0, 100%, 100%);
+}
+body {
+  background: hsl(0, 0%, 80);
+}
+.hero {
+  background-image: linear-gradient(#1111, #1114, #1111),
+    url(images/dark\ bg\ doctors.jpeg);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 10%;
+}
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+ul li a {
+  text-decoration: none;
+  display: block;
+  font-family: lato;
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 10px;
+  line-height: 65px;
+  text-shadow: 1px 1px 8px black;
+}
+ul .active a {
+  color: hsl(180, 80%, 50%);
+}
+ul li a:hover {
+  color: hsl(180, 80%, 50%);
+}
+.btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  background: hsl(180, 80%, 45%);
+  padding: 10px 20px;
+  margin: 0 2px;
+  margin-top: 20px;
+  border: none;
+}
+.alternate {
+  background: white;
+  color: hsl(180, 80%, 35%);
+  margin-left: 0;
+}
+.title-box {
+  position: relative;
+  top: 20%;
+  left: 10%;
+}
+.title-box h1 {
+  font-size: 42px;
+  font-weight: 300;
+  text-transform: capitalize;
+  font-family: poppins;
+  text-rendering: optimizeLegibility;
+  line-height: 50px;
+  text-shadow: 1px 1px 8px black;
+}
+.title-box p {
+  font: 1em sans-serif;
+  line-height: 30px;
+  text-shadow: 4px 4px 20px black;
+}
+fieldset {
+  border: none;
+}
+.form-box {
+  background-color: hsl(180, 80%, 45%);
+  width: 50vw;
+  padding: 40px 0 20px 10%;
+  height: 1000px;
+}
+.form-box h2 {
+  text-transform: capitalize;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.form-box p {
+  text-transform: uppercase;
+  font-family: lato;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.box-content {
+  display: flex;
+  align-items: center;
+}
+.group-one {
+  background: transparent;
+  padding: 10px 0;
+}
+.group-two {
+  background: transparent;
+  padding: 10px 0;
+  margin-left: 10px;
+}
+.box-content .box fieldset {
+  margin-bottom: 40px;
+}
+.box-content input {
+  border: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  width: 250px;
+  padding: 20px 10px;
+  outline: none;
+  font-size: 14px;
+  color: white;
+}
+.box-content label {
+  display: flex;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: lato;
+  font-size: 13px;
+  font-weight: bold;
+}
+.box-content select {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  width: 250px;
+  padding: 20px 10px;
+  position: relative;
+}
+.box-content select option {
+  width: inherit;
+  height: 100px;
+  background: red;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  z-index: 1;
+}

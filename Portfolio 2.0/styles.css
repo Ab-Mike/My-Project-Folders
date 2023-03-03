@@ -1,0 +1,360 @@
+:root {
+	--myPri-color: hsl(215, 52%, 60%);
+	--mySec-color: hsl(186, 55%, 25%);
+	--primary-deep: hsl(240, 67%, 47%);
+	--light-dark: hsla(0, 0%, 7%, 0.133);
+	--dark: hsl(0, 0%, 0%);
+	--light: hsl(0, 0%, 100%);
+	--active-link: hsl(271, 68%, 32%);
+	--color: #1d5c63, #1a4341, #243db3, #6592cf, #e7e5e4 #919783,
+		hsl(271, 68%, 32%), #ee0000, hsl(240, 100%, 47%);
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+body {
+	color: var(--light);
+	width: 100vw;
+	min-width: 600px;
+	height: 100vh;
+	overflow-x: hidden;
+	font-family: poppins, sans-serif;
+}
+.top-ribbon {
+	width: 100%;
+	font-size: clamp(0.5rem, 0.5rem + 1vw, 1rem);
+	background: var(--mySec-color);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 10%;
+	color: var(--light);
+}
+.top-ribbon .social-icons a img {
+	width: 20px;
+	margin: 5px;
+}
+header {
+	background-image: url(images/background.png);
+	background-position: top left;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+nav {
+	background: #fff2;
+	width: 100vw;
+	min-width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0px 1px 1px #1112;
+	padding-block: 1rem 7.5px;
+	padding-inline: 10%;
+}
+.logo {
+	font-size: 22px;
+	color: var(--dark);
+	font-family: "Nexa Rust Slab";
+	text-shadow: 0px 0px 8px var(--light-dark);
+	cursor: pointer;
+}
+span {
+	color: hsl(215, 52%, 50%);
+}
+.span {
+	color: var(--mySec-color);
+}
+ul li {
+	display: inline-block;
+}
+ul li a {
+	color: var(--light);
+	font-weight: 400;
+	text-shadow: 0.5px 0.5px 0px #111;
+	padding: 4px 20px;
+	text-transform: uppercase;
+	position: relative;
+	letter-spacing: 1px;
+}
+ul li a::after {
+	content: "";
+	width: 0%;
+	height: 2px;
+	background: var(--myPri-color);
+	position: absolute;
+	left: 50%;
+	bottom: -6px;
+	transform: translateX(-50%);
+	transition: width 500ms ease-in-out;
+}
+ul li .active,
+.active::after {
+	width: 80%;
+	--myPri-color: hsl(215, 100%, 60%);
+	color: var(--myPri-color);
+	font-weight: bold;
+}
+ul li a:hover {
+	--myPri-color: hsl(215, 100%, 60%);
+	color: var(--myPri-color);
+	font-weight: bold;
+}
+ul li a:hover::after {
+	width: 80%;
+	color: var(--myPri-color);
+}
+.hero {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	padding: 0 10%;
+}
+
+/*----title section----*/
+.title-section {
+	position: relative;
+	top: 30%;
+	left: 0;
+}
+.title-section h3 {
+	font-size: clamp(1rem, 1rem + 5vw, 1.5rem);
+	text-shadow: 0.5px 0.5px 1px var(--dark);
+}
+
+h1 {
+	line-height: 1.05;
+	font-size: clamp(2.5rem, 2.5rem + 5vw, 10rem);
+	text-transform: capitalize;
+	color: var(--light);
+	text-shadow: 0 0 12px var(--dark);
+}
+h2 {
+	line-height: 1;
+	font-size: clamp(1rem, 1rem + 5vw, 4rem);
+	text-shadow: 0 0 12px var(--dark);
+}
+h3 {
+	font-size: clamp(1rem, 1rem + 5vw, 1.5rem);
+}
+
+/*----buttons----*/
+.btn {
+	padding: 12px 22px;
+	width: fit-content;
+	background: var(--mySec-color);
+	color: var(--light);
+	text-transform: uppercase;
+	box-shadow: -1px -1px 1px #1118;
+	font-weight: bold;
+	border: none;
+	margin: 10px 2px;
+	cursor: pointer;
+}
+.explore {
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+.contact {
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.btn:hover {
+	background: var(--primary-deep);
+}
+i {
+	display: block;
+	font-size: medium;
+	font-family: "chocolate cookies";
+	text-shadow: 0.5px 0.5px 1px var(--dark);
+}
+@media (max-width: 719.9px) {
+	body {
+		overflow-x: hidden;
+		min-width: 375px;
+	}
+	form {
+		display: none;
+	}
+	ul li {
+		display: none;
+	}
+	header {
+		height: 100vh;
+	}
+	.top-ribbon {
+		padding-inline: 2%;
+	}
+	.social-icons {
+		display: none;
+	}
+	.title-section {
+		top: 10%;
+		width: 100%;
+	}
+}
+@media (max-width: 991.9px) {
+	form {
+		display: none;
+	}
+	ul li {
+		display: none;
+	}
+}
+
+/*----form section-----*/
+form {
+	width: 21rem;
+	background: transparent;
+	border: 2px solid #1112;
+	color: var(--light);
+	padding: 30px;
+	border-radius: 4px;
+	margin-right: 10%;
+	transform: translate(220%, -40%);
+}
+form .form-title {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+form input {
+	display: block;
+	width: 100%;
+	padding: 10px 6px;
+	margin: 6px 0;
+	display: block;
+}
+form select {
+	display: block;
+	width: 100%;
+	padding: 10px 6px;
+	margin: 6px 0;
+}
+.box {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 14%;
+}
+.box img {
+	width: 305px;
+	height: 180px;
+	border: 12px solid var(--light);
+	border-radius: 4px;
+}
+.box-text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 14%;
+	position: relative;
+	text-align: center;
+	line-height: 30px;
+}
+.box-text .text1 {
+	text-align: center;
+}
+.box-text h3 {
+	font-family: "arsenal";
+}
+.box-text p {
+	font-family: serif;
+	font-size: 17px;
+	color: #1119;
+}
+/* Services Page Section */
+.section {
+	overflow-y: hidden;
+	height: 100vh;
+	width: 100%;
+	padding: 0 7%;
+}
+.one {
+	background: var(--myPri-color);
+}
+.service-intro {
+	height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.8rem;
+	padding: 30px;
+	color: #000;
+	background: var(--light);
+}
+
+.service-board {
+	height: 58vh;
+	margin: 0 auto;
+	display: flex;
+	box-sizing: content-box;
+	gap: 1rem;
+	margin-bottom: 2vh;
+}
+.service-board .card {
+	background: var(--mySec-color);
+	padding: 1.5rem;
+}
+.card img {
+	width: 60px;
+	margin: 0 auto;
+}
+.card h3 {
+	font-size: 2rem;
+	text-align: center;
+	padding: 0 16px;
+	color: var(--color-text);
+}
+.card p {
+	text-align: left;
+	line-height: 27px;
+	margin-block: 1rem;
+	color: var(--color-text);
+}
+.card .btn {
+	color: var(--color-og);
+	font-weight: 400;
+	padding: 0 14px;
+	font-size: clamp(0.8rem, 0.8rem + 1vw, 1rem);
+}
+/* About page styling */
+.two {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4%;
+	align-items: center;
+	justify-content: center;
+	background: var(--dark);
+	background-position: center;
+	background-size: cover;
+}
+.two .img-cover {
+	width: 38%;
+	margin-left: 10%;
+}
+.img-box {
+	width: 38vw;
+	height: 90vh;
+	background-image: url(Images/uwp2629397.jpeg);
+	background-position: center;
+	background-size: cover;
+	margin-top: 1vh;
+	border-radius: 6px;
+}
+
+.two .text-body {
+	width: 38vw;
+	color: var(--color-text);
+	background: var(--light-dark);
+	margin-right: 10%;
+}
+.text-body h3 {
+	text-align: center;
+	font-size: clamp(1.5rem, 1rem + 1vw, 2.5rem);
+}
+.text-body p {
+	text-align: justify;
+}
